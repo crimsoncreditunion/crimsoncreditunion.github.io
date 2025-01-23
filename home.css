@@ -1,0 +1,143 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding-bottom: 60px; /* Adding space for the fixed footer */
+}
+
+h1 h2 h3 h4 {
+    font-family: "Kanit", sans-serif;
+}
+
+/* Navbar (Fixed) */
+header {
+    background-color: #ed2a2a;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ed2a2a;
+    color: white;
+    text-align: center;
+    padding: 150px 0 50px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: white;
+    color: #ed2a2a;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #ed2a2a;
+}
+
+/* Popular Posts Section */
+.popular-posts {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.popular-posts h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.post-preview {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.post-preview:last-child {
+    border-bottom: none;
+}
+
+.post-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.post-text {
+    flex: 1;
+}
+
+.post-text p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    color: #ed2a2a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Footer (Fixed) */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
