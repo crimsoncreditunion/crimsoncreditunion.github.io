@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard - Crimson Credit Union</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="dashstyles.css"> <!-- Link to external CSS for styling -->
+    <script src="logout.js" defer></script> <!-- Link to external JS for logout -->
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Crimson Credit Union</h2>
+                <p><i>Employee Dashboard</i></p>
+                <br>
+                <img src="logo.png" alt="CCU Logo" width="100px">
+                <br >
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#employeeDetails">Employee Info</a></li>
+                    <li><a href="#announcements">Announcements</a></li>
+                    <li><a href="#administration">Server Uptime</a></li>
+                    <li><a href="#logout" id="logoutButton">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <section id="employeeDetails" class="card">
+                <h3>Employee Details</h3>
+                <p><strong>Name:</strong> Henry Murphy</p>
+                <p><strong>Role:</strong> Chief Technical Officer</p>
+                <p><strong>Email:</strong> hmurphy.crimsoncreditunion@gmail.com</p>
+                <p><strong>Employee ID:</strong> hmurphy</p>
+                <p><strong>Department:</strong> Office & Administration</p>
+            </section>
+
+            <section id="announcements" class="card">
+                <h3>Company Announcements</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sender</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Aadrika Padhi</td>
+                                <td>Due to an uptick in cyber attacks we need to invest more money in infrastructure. I want to hire...</td>
+                            </tr>
+                            <tr>
+                                <td>Jeffrey Barrett</td>
+                                <td>Good morning. Next Monday is the annual Staff Party at the main office. We would like to ask all...</td>
+                            </tr>
+                            <tr>
+                                <td>Emily Peterson</td>
+                                <td>Employees with more than fourteen missed days need to come to the Human Resources Office for forms...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <button id="viewAccountsBtn">View Announcements</button>
+                <button id="viewAccountsBtn">Send Announcements</button>
+            </section>
+
+            <section id="administration" class="card">
+                <h3>Server Uptime</h3>
+                <canvas id="uptimeChart" width="400" height="200"></canvas>
+                <script>
+                    // Assuming you have already included the Chart.js library in your HTML file.
+
+                    function createUptimeGraph(data) {
+                        // Example uptime data format
+                        // data: { dates: ['2025-01-01', '2025-01-02', '2025-01-03'], uptime: [99, 95, 100] }
+
+                        const ctx = document.getElementById('uptimeChart').getContext('2d');
+                        
+                        // Create a new chart using Chart.js
+                        const uptimeChart = new Chart(ctx, {
+                            type: 'line',  // Use a line chart to display uptime trends
+                            data: {
+                                labels: data.dates,  // Dates on the x-axis
+                                datasets: [{
+                                    label: 'Computer Uptime (%)',
+                                    data: data.uptime,  // Uptime percentages on the y-axis
+                                    borderColor: '#4CAF50',  // Line color
+                                    backgroundColor: 'rgba(76, 175, 80, 0.2)',  // Line area background color
+                                    borderWidth: 2,
+                                    fill: true,  // Fill the area under the line
+                                    tension: 0.4,  // Smoothness of the line
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        max: 100,  // Max value for uptime is 100%
+                                        title: {
+                                            display: true,
+                                            text: 'Uptime (%)'
+                                        }
+                                    },
+                                    x: {
+                                        title: {
+                                            display: true,
+                                            text: 'Date'
+                                        }
+                                    }
+                                },
+                                plugins: {
+                                    tooltip: {
+                                        callbacks: {
+                                            label: function(tooltipItem) {
+                                                return tooltipItem.raw + '%';  // Show percentage in tooltip
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    }
+
+                    // Example usage:
+                    const uptimeData = {
+                        dates: ['2025-01-01', '2025-01-02', '2025-01-03', '2025-01-04', '2025-01-05'],
+                        uptime: [99, 98, 100, 97, 99]
+                    };
+
+                    createUptimeGraph(uptimeData);
+
+                </script>
+                <button id="viewAccountsBtn">View Server Details</button>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for Logout Confirmation -->
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <h3>Are you sure you want to logout?</h3>
+            <button id="confirmLogout" class="btn btn-primary">Yes</button>
+            <button id="cancelLogout" class="btn btn-secondary">No</button>
+        </div>
+    </div>
+</body>
+</html>

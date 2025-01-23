@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard - Crimson Credit Union</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="dashstyles.css"> <!-- Link to external CSS for styling -->
+    <script src="logout.js" defer></script> <!-- Link to external JS for logout -->
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="dashboard-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Crimson Credit Union</h2>
+                <p><i>Employee Dashboard</i></p>
+                <br>
+                <img src="logo.png" alt="CCU Logo" width="100px">
+                <br >
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#employeeDetails">Employee Info</a></li>
+                    <li><a href="#announcements">Announcements</a></li>
+                    <li><a href="#administration">Employees</a></li>
+                    <li><a href="#logout" id="logoutButton">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <section id="employeeDetails" class="card">
+                <h3>Employee Details</h3>
+                <p><strong>Name:</strong> Emily Peterson</p>
+                <p><strong>Role:</strong> HR Manager</p>
+                <p><strong>Email:</strong> epeterson.crimsoncreditunion@gmail.com</p>
+                <p><strong>Employee ID:</strong> epeterson</p>
+                <p><strong>Department:</strong> Human Resources</p>
+            </section>
+
+            <section id="announcements" class="card">
+                <h3>Company Announcements</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Sender</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Aadrika Padhi</td>
+                                <td>Due to an uptick in cyber attacks we need to invest more money in infrastructure. I want to hire...</td>
+                            </tr>
+                            <tr>
+                                <td>Jeffrey Barrett</td>
+                                <td>Good morning. Next Monday is the annual Staff Party at the main office. We would like to ask all...</td>
+                            </tr>
+                            <tr>
+                                <td>Emily Peterson</td>
+                                <td>Employees with more than fourteen missed days need to come to the Human Resources Office for forms...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                <button id="viewAccountsBtn">View Announcements</button>
+                <button id="viewAccountsBtn">Send Announcements</button>
+            </section>
+
+            <section id="administration" class="card">
+                <h3>Employees</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Employee Name</th>
+                            <th>Department</th>
+                            <th>Contact</th>
+                            <th>Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Carolyn Marshall</td>
+                            <td>Advertising & Marketing</td>
+                            <td>cmarshall.crimsoncreditunion@gmail.com</td>
+                            <td>Advertising Support</td>
+                        </tr>
+                        <tr>
+                            <td>Bryce Young</td>
+                            <td>Advertising & Marketing</td>
+                            <td>byoung.crimsoncreditunion@gmail.com</td>
+                            <td>Marketing Strategist</td>
+                        </tr>
+                        <tr>
+                            <td>Emily Peterson</td>
+                            <td>Human Resources</td>
+                            <td>epeterson.crimsoncreditunion@gmail.com</td>
+                            <td>HR Manager</td>
+                        </tr>
+                        <tr>
+                            <td>Maggie Turner</td>
+                            <td>Human Resources</td>
+                            <td>mturner.crimsoncreditunion@gmail.com</td>
+                            <td>HR Secretary</td>
+                        </tr>
+                        <tr>
+                            <td>Ryan Holdsey</td>
+                            <td>Customer Service</td>
+                            <td>rholdsey.crimsoncreditunion@gmail.com</td>
+                            <td>Teller</td>
+                        </tr>
+                        <tr>
+                            <td>Ricky Mickey</td>
+                            <td>Customer Service</td>
+                            <td>rmickey.crimsoncreditunion@gmail.com</td>
+                            <td>Teller</td>
+                        </tr>
+                        <tr>
+                            <td>Katy Bloom</td>
+                            <td>Customer Service</td>
+                            <td>kbloom.crimsoncreditunion@gmail.com</td>
+                            <td>Teller</td>
+                        </tr>
+                        <tr>
+                            <td>Diana Ross</td>
+                            <td>Customer Service</td>
+                            <td>dross.crimsoncreditunion@gmail.com</td>
+                            <td>Teller</td>
+                        </tr>
+                        <tr>
+                            <td>Maria Dubois</td>
+                            <td>Customer Service</td>
+                            <td>mdubois.crimsoncreditunion@gmail.com</td>
+                            <td>Teller</td>
+                        </tr>
+                        <tr>
+                            <td>Richard MacIntyre</td>
+                            <td>Finance</td>
+                            <td>rmacintyre.crimsoncreditunion@gmail.com</td>
+                            <td>Loan Specialist</td>
+                        </tr>
+                        <tr>
+                            <td>Caitlyn Kiramann</td>
+                            <td>Finance</td>
+                            <td>ckirraman.crimsoncreditunion@gmail.com</td>
+                            <td>Accountant</td>
+                        </tr>
+                        <tr>
+                            <td>Demarcus Little</td>
+                            <td>Finance</td>
+                            <td>dlittle.crimsoncreditunion@gmail.com</td>
+                            <td>Senior Accountant</td>
+                        </tr>
+                        <tr>
+                            <td>Micah Smith</td>
+                            <td>IT</td>
+                            <td>msmith.crimsoncreditunion@gmail.com</td>
+                            <td>IT Specialist</td>
+                        </tr>
+                        <tr>
+                            <td>Campbell Campbell</td>
+                            <td>IT</td>
+                            <td>ccampbell.crimsoncreditunion@gmail.com</td>
+                            <td>IT Specialist II</td>
+                        </tr>
+                        <tr>
+                            <td>Carrie Fisher</td>
+                            <td>Office & Administration</td>
+                            <td>cfisher.crimsoncreditunion@gmail.com</td>
+                            <td>Office Secretary</td>
+                        </tr>
+                        <tr>
+                            <td>Morgan LeFay</td>
+                            <td>Office & Administration</td>
+                            <td>mlefay.crimsoncreditunion@gmail.com</td>
+                            <td>Office Secretary</td>
+                        </tr>
+                        <tr>
+                            <td>Arthur King</td>
+                            <td>Office & Administration</td>
+                            <td>aking.crimsoncreditunion@gmail.com</td>
+                            <td>Event Planner</td>
+                        </tr>
+                        <tr>
+                            <td>Jeffrey Barrett</td>
+                            <td>Office & Administration</td>
+                            <td>jbarrett.crimsoncreditunion@gmail.com</td>
+                            <td>CEO</td>
+                        </tr>
+                        <tr>
+                            <td>John Wang</td>
+                            <td>Office & Administration</td>
+                            <td>jwang.crimsoncreditunion@gmail.com</td>
+                            <td>COO</td>
+                        </tr>
+                        <tr>
+                            <td>Henry Murphy</td>
+                            <td>Office & Administration</td>
+                            <td>hmurphy.crimsoncreditunion@gmail.com</td>
+                            <td>CTO</td>
+                        </tr>
+                        <tr>
+                            <td>Susan Oliver</td>
+                            <td>Office & Administration</td>
+                            <td>soliver.crimsoncreditunion@gmail.com</td>
+                            <td>CFO</td>
+                        </tr>
+                        <tr>
+                            <td>Aadrika Padhi</td>
+                            <td>Office & Administration</td>
+                            <td>apadhi.crimsoncreditunion@gmail.com</td>
+                            <td>CSO</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="viewAccountsBtn">Edit Employees</button>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for Logout Confirmation -->
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <h3>Are you sure you want to logout?</h3>
+            <button id="confirmLogout" class="btn btn-primary">Yes</button>
+            <button id="cancelLogout" class="btn btn-secondary">No</button>
+        </div>
+    </div>
+</body>
+</html>
