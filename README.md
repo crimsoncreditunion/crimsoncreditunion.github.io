@@ -1,5 +1,5 @@
 # Crimson Credit Union
-(crimsoncreditunion.github.io)[https://crimsoncreditunion.github.io]
+[crimsoncreditunion.github.io](https://crimsoncreditunion.github.io)
 
 ## DISCLAIMER:
 Crimson Credit Union is an educational website for developing healthy cyber security practices, **not a real financial institution**! None of the people who are mentioned in this site are real. Any resemblance to the real world or real people is coincidental and not intentional by the creators of this site.
@@ -21,5 +21,6 @@ Pay your artists.
 ---
 
 43 72 69 6d 73 6f 6e 20 44 65 66 65 6e 73 65 20 43 79 62 65 72 20 53 65 63 75 72 69 74 79 20 43 6c 75 62
+
 
 
